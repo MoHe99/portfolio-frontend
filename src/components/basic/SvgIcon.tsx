@@ -1,8 +1,11 @@
 import DOMPurify from "dompurify";
 import { Component, createEffect } from "solid-js";
-import { TSocialMedia } from "../../types/sanity/socialMedia.types";
 
-const SvgIconComponent: Component<TSocialMedia> = (props) => {
+type Props = {
+  svgIcon: string;
+};
+
+const SvgIconComponent: Component<Props> = (props) => {
   let element: HTMLDivElement | undefined;
 
   createEffect(() => {
